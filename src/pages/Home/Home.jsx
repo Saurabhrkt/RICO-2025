@@ -1,50 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import './Home.css';
-import nitImage from '../../assets/nitj.jpg'; // Ensure this exists
-
-const eventStartDate = new Date('2025-09-22T09:00:00');
+import React, { useState, useEffect } from "react";
+import "./Home.css";
+import nitImage from "../../assets/nitj.jpg"; // background image
+import logo from "../../assets/logo.png"; // NITJ logo
 
 const Home = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const calculateTimeLeft = () => {
+    const difference = +new Date("2025-09-22") - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date();
-      const difference = eventStartDate - now;
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / 1000 / 60) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
-        setTimeLeft({ days, hours, minutes, seconds });
-      } else {
-        clearInterval(timer);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
 
   return (
-    <div className="home-wrapper" id='home'>
-      <div
-        className="home-header"
-        style={{ backgroundImage: `url(${nitImage})` }}
-      >
+    <div className="home-wrapper" id="home">
+      <div className="home-header" style={{ backgroundImage: `url(${nitImage})` }}>
+        
+        {/* NITJ Logo at top-left */}
+        <img src={logo} alt="NIT Jalandhar Logo" className="nitj-logo" />
+
         <div className="overlay">
-          <h1 className="home-title">Welcome to <span className="highlight">RICO-2025</span></h1>
-          <p className="home-subtitle">Recent Industrial Trends in Control and Optimization</p>
-          <p className="home-date">22<sup>nd</sup> – 26<sup>th</sup> September 2025</p>
+          <h1 className="home-title">
+            Anusandhan National Research Foundation (ANRF) Sponsored
+          </h1>
+          <h2 className="home-subtitle">
+            5-Days National Symposia on <br />
+            <span className="highlight">Recent Industrial Trends in Control and Optimization (RICO-2025)</span>
+          </h2>
+          <p className="home-date">
+            <strong>22<sup>nd</sup> – 26<sup>th</sup> September 2025</strong> <br />
+          </p>
           <p className="home-org">
             Organized by <br />
-            <strong>Department of Instrumentation and Control Engineering</strong>,<br />
-            <span className="nit-name">NIT Jalandhar</span>
+            <strong>Department of Instrumentation and Control Engineering</strong>, <br />
+            <span className="nit-name">Dr B R Ambedkar National Institute of Technology, Jalandhar, Punjab</span>
           </p>
 
-          <div className="countdown">
-            <h3>⏳ Event starts in:</h3>
+          {/* Countdown Section */}
+          <div className="countdown-box">
+            <h3 className="countdown-heading">⏳ Event Countdown</h3>
             <div className="timer">
               <div><span>{timeLeft.days}</span><p>Days</p></div>
               <div><span>{timeLeft.hours}</span><p>Hours</p></div>

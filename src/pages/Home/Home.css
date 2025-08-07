@@ -1,13 +1,8 @@
-/* Wrapper covers full screen */
 .home-wrapper {
   width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
-/* Header image covers full screen and edges */
 .home-header {
   background-size: cover;
   background-position: center;
@@ -17,113 +12,108 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: relative; /* Needed for absolute positioning of logo */
 }
 
-/* Dark overlay with text centered */
+.nitj-logo {
+  position: absolute;
+  top: 75px;
+  left: 5px;
+  width: 90px;
+  height: auto;
+  animation: fadeIn 1s ease-in-out forwards;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .nitj-logo {
+    width: 70px;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nitj-logo {
+    width: 60px;
+    top: 63px;
+    left: 10px;
+  }
+}
+
+  /* Your existing overlay styles */
 .overlay {
-  background: rgba(0, 0, 0, 0.55);
-  color: white;
-  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
   text-align: center;
-  border-radius: 1rem;
   max-width: 900px;
-  margin: 0 1rem;
-
-  animation: fadeSlideUp 1.5s ease-out both;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s ease-out forwards;
 }
-
-/* Title Styling */
 .home-title {
-  font-size: 3.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-.highlight {
-  color: #60a5fa;
+  margin-bottom: 1rem;
 }
 
 .home-subtitle {
-  font-size: 1.4rem;
-  font-weight: 500;
-  animation: fadeIn 2s ease-in-out forwards;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.home-date {
-  margin-top: 0.5rem;
-  font-style: italic;
-  font-size: 1.1rem;
-  animation: fadeIn 2.5s ease-in-out forwards;
+.highlight {
+  color: #00f0ff;
+  font-weight: bold;
 }
 
+.home-date,
 .home-org {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  animation: fadeIn 3s ease-in-out forwards;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
 }
 
 .nit-name {
-  color: #93c5fd;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* Countdown Timer Styles */
-.countdown {
-  margin-top: 2rem;
-  text-align: center;
-  animation: fadeIn 3.5s ease-in-out forwards;
+.countdown-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00f0ff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  color: #fff;
 }
 
-.countdown h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.countdown-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .timer {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.25rem;
+  justify-content: space-around;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #fff;
-  margin-top: 0.5rem;
 }
 
-.timer div {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 0.75rem 1rem;
-  border-radius: 0.75rem;
-  text-align: center;
-  min-width: 70px;
-}
-
-.timer div span {
-  display: block;
-  font-size: 2rem;
-  color: #93c5fd;
-}
-
-.timer div p {
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
-  color: #e0e7ff;
-}
 
 /* Animations */
-@keyframes fadeSlideUp {
+@keyframes fadeSlideIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 
 @keyframes fadeIn {
   from {
@@ -214,5 +204,32 @@
 
   .timer div p {
     font-size: 0.7rem;
+  }
+}
+.nitj-logo {
+  width: 90px;
+  height: auto;
+  margin-left: -1px;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out forwards;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .nitj-logo {
+    width: 70px;
+    margin-bottom: 0.8rem;
+    margin-top: 1.5rem;
+    margin-left: 40vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .nitj-logo {
+
+    width: 60px;
+    margin-top: 2rem;
+    margin-left: 40vw;
   }
 }

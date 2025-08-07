@@ -1,14 +1,17 @@
-/* Base styles */
+/* === Navbar Styles === */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #1d4ed8; /* Blue */
+  background: #243fdc; /* Subtle blue */
   color: white;
   z-index: 999;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* Container */
 .navbar-container {
   max-width: 1200px;
   margin: auto;
@@ -18,35 +21,65 @@
   align-items: center;
 }
 
-/* Branding */
+/* Brand */
 .navbar-brand {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* Hamburger button */
+/* Hamburger Icon */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
   background: none;
-  color: white;
   border: none;
   cursor: pointer;
 }
 
-/* Links */
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.menu-toggle.open .top {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.open .middle {
+  opacity: 0;
+}
+
+.menu-toggle.open .bottom {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Nav Links */
 .navbar-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
-  transition: max-height 0.3s ease;
+  gap: 2rem;
+  transition: all 0.4s ease;
 }
 
 .navbar-links li a {
   color: white;
   text-decoration: none;
+  font-size: 1.05rem;
   font-weight: 500;
+  padding: 0.5rem 0.3rem;
+  transition: 0.3s;
   position: relative;
+}
+
+.navbar-links li a:hover {
+  color: #ffeb3b;
 }
 
 .navbar-links li a::after {
@@ -54,9 +87,9 @@
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -4px;
   left: 0;
-  background-color: white;
+  bottom: -5px;
+  background-color: #ffeb3b;
   transition: width 0.3s;
 }
 
@@ -64,10 +97,10 @@
   width: 100%;
 }
 
-/* Mobile styles */
+/* === Mobile View === */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .navbar-container {
@@ -77,14 +110,16 @@
 
   .navbar-links {
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    overflow: hidden;
     max-height: 0;
+    overflow: hidden;
     padding: 0;
+    background-color: #3f51b5;
   }
 
   .navbar-links.show {
-    max-height: 500px; /* big enough to show all items */
+    max-height: 500px;
     padding-top: 1rem;
   }
 
@@ -94,13 +129,13 @@
   }
 
   .navbar-links li a {
-    padding: 0.5rem 1rem;
     display: block;
     width: 100%;
+    padding: 0.8rem 1.2rem;
   }
 }
 
-/* Push page content below fixed navbar */
+/* Prevent content from going under navbar */
 body {
-  padding-top: 70px;
+  padding-top: 80px;
 }

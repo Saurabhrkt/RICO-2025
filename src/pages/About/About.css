@@ -1,0 +1,47 @@
+.about-ice-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  
+}
+
+.about-ice-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-ice-title {
+  font-size: 1.875rem;
+  text-align: center;
+  color: #1e3a8a;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .about-ice-title {
+    font-size: 2.25rem;
+  }
+}
+
+.about-ice-content {
+  background-color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: #1f2937;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+@media (min-width: 640px) {
+  .about-ice-content {
+    padding: 2rem;
+  }
+}
+
+.about-ice-paragraph {
+  margin-bottom: 1rem;
+}

@@ -84,6 +84,40 @@
   animation: float 8s ease-in-out infinite reverse;
   z-index: 0;
 }
+.contact-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.contact-table thead {
+  background-color: #e0ecff;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+  font-size: 1rem;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+.contact-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

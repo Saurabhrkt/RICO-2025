@@ -5,53 +5,52 @@ const Objectives = () => {
   const objectiveData = [
     {
       id: 1,
-      title: 'Multidisciplinary Skills Development',
-      description: 'Promote comprehensive understanding and application of multidisciplinary skills in Control & Optimization across various engineering domains.',
-      icon: '⚙️',
+      title: 'Multidisciplinary Knowledge in Control & Optimization',
+      description: 'Provide participants with in-depth understanding of robust, adaptive, and AI-integrated control systems, and optimization techniques that are revolutionizing modern industry and infrastructure.',
+      icon: '📘',
       iconClass: 'multidisciplinary',
-      highlights: ['Control Systems', 'Optimization', 'Engineering Integration']
+      highlights: ['AI in Control', 'Nature-Inspired Optimization', 'Multidisciplinary Skills']
     },
     {
       id: 2,
-      title: 'National Priority Sectors',
-      description: 'Focus on cutting-edge technologies in national priority sectors including Electric Vehicles, Smart Grids, and Agricultural Technology.',
-      icon: '🚗',
+      title: 'Focus on National Priority Sectors',
+      description: 'Explore control and optimization technologies across EVs, Smart Grids, Agritech, Defense, and Space sectors.',
+      icon: '🚀',
       iconClass: 'priority-sectors',
-      highlights: ['Electric Vehicles', 'Smart Grids', 'Agritech']
+      highlights: ['Electric Vehicles', 'Smart Grids', 'Defense & Agritech']
     },
     {
       id: 3,
-      title: 'Academia-Industry Collaboration',
-      description: 'Foster strong partnerships between academic institutions and industry leaders to bridge the gap between theoretical knowledge and practical applications.',
-      icon: '🤝',
+      title: 'Strengthen Academia-Industry Collaboration',
+      description: 'Encourage co-development of indigenous technologies by linking academic research with real-world challenges in industry and defense.',
+      icon: '🏭',
       iconClass: 'collaboration',
-      highlights: ['Research Partnerships', 'Industry Integration', 'Knowledge Transfer']
+      highlights: ['Joint R&D', 'Prototypes', 'Industry-Academia Partnerships']
     },
     {
       id: 4,
-      title: 'Policy Support & Vision',
-      description: 'Align research and development efforts with national education policies and long-term vision for sustainable growth and innovation.',
-      icon: '📋',
+      title: 'Foster Research Aligned with National Vision',
+      description: 'Support NEP 2020 and Viksit Bharat 2047 by integrating research, innovation, and education towards a sustainable future.',
+      icon: '📜',
       iconClass: 'policy-support',
-      highlights: ['NEP 2020', 'Viksit Bharat 2047', 'Educational Excellence']
+      highlights: ['NEP 2020', 'Viksit Bharat 2047', 'Innovation-Led Learning']
     },
     {
       id: 5,
-      title: 'Indigenous Research Excellence',
-      description: 'Empower and strengthen indigenous research capabilities aligned with national initiatives for self-reliance and technological advancement.',
-      icon: '🔬',
+      title: 'Empower Indigenous Technological Advancements',
+      description: 'Promote indigenous design and implementation under Make in India, Aatmanirbhar Bharat, and Digital India initiatives.',
+      icon: '🧬',
       iconClass: 'indigenous-research',
-      highlights: ['Make in India', 'Digital India', 'Innovation Hub']
+      highlights: ['Made in India', 'Digital Control', 'Cyber-Physical Systems']
     }
   ];
 
   return (
     <div className="objectives-container" id='objectives'>
       <div className="objectives-header">
-        <h1 className="objectives-title">Our Objectives</h1>
+        <h1 className="objectives-title">Core Objectives</h1>
         <p className="objectives-subtitle">
-          Driving innovation and excellence in Control & Optimization through comprehensive 
-          research, collaboration, and technological advancement
+          Empowering India's transformation through cutting-edge research in robust and data-driven control, and nature-inspired optimization techniques.
         </p>
       </div>
 

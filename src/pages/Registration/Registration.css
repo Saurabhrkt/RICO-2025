@@ -1,16 +1,16 @@
-
-.registration-container{
+.registration-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   min-height: 50vh;
   position: relative;
+  overflow: hidden;
 }
 
-.registration-title{
+.registration-title {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
   background: linear-gradient(135deg, #1e40af, #3b82f6, #06b6d4);
   -webkit-background-clip: text;
@@ -21,7 +21,7 @@
 }
 
 .registration-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: white;
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
@@ -30,16 +30,16 @@
   border: 1px solid #e2e8f0;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
-.registration-card:hover{
+.registration-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border-color: #3b82f6;
 }
 
-.registration-card::before{
+.registration-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -49,10 +49,15 @@
   background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
 }
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 .registration-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
+  min-width: 600px;
 }
 
 .registration-table thead {
@@ -77,43 +82,99 @@
   margin-top: 1rem;
 }
 
+.here {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-weight: 500;
+}
 
-/* Floating bubble animation for contact/registration headers */
-.registration-container::before{
+.payment-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.payment-card p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.qr-code img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating animated decorative elements */
+.registration-container::before,
+.registration-container::after {
   content: '';
   position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.registration-container::before {
   top: -50px;
   left: 10%;
   width: 100px;
   height: 100px;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  border-radius: 50%;
-  opacity: 0.1;
   animation: float 6s ease-in-out infinite;
-  z-index: 0;
 }
-.registration-container::after{
-  content: '';
-  position: absolute;
+
+.registration-container::after {
   top: -30px;
   right: 15%;
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  border-radius: 50%;
-  opacity: 0.1;
   animation: float 8s ease-in-out infinite reverse;
-  z-index: 0;
 }
-@media (max-width: 768px) {
-  #registration {
-  padding-top: 80px;
-  margin-top: -60px;
-  z-index: -1;
-  padding-bottom:50px;
-}
-}
+
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 768px) {
+  .registration-title {
+    font-size: 2rem;
+  }
+
+  .registration-card {
+    padding: 1.2rem;
+  }
+
+  .registration-table {
+    font-size: 0.9rem;
+  }
+
+  .registration-note,
+  .payment-card p {
+    font-size: 0.9rem;
+  }
+
+  #registration {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    z-index:4;
+    position: relative;
+  }
+
+  .qr-code img {
+    width: 120px;
+    height: 120px;
+  }
 }

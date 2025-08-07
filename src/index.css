@@ -16,3 +16,25 @@ html {
 html {
   scroll-padding-top: 50px; /* Adjust based on your navbar height */
 }
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #1e3be0;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0); /* fix white line glitch */
+}
