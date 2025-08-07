@@ -1,16 +1,13 @@
 /* src/pages/Registration.css */
-
-.registration-container,
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  min-height: 100vh;
+  min-height: 50vh;
   position: relative;
 }
 
-.registration-title,
 .contact-title {
   text-align: center;
   font-size: 2.8rem;
@@ -23,7 +20,6 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.registration-card,
 .contact-card {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   max-width: 700px;
@@ -37,14 +33,12 @@
   overflow: hidden;
 }
 
-.registration-card:hover,
 .contact-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border-color: #3b82f6;
 }
 
-.registration-card::before,
 .contact-card::before {
   content: '';
   position: absolute;
@@ -54,35 +48,6 @@
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
 }
-
-.registration-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-
-.registration-table thead {
-  background-color: #e0ecff;
-}
-
-.registration-table th,
-.registration-table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #cbd5e1;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.registration-table tbody tr:hover {
-  background-color: #f1f5f9;
-}
-
-.registration-note {
-  font-size: 0.95rem;
-  color: #374151;
-  margin-top: 1rem;
-}
-
 .contact-list {
   list-style-type: disc;
   margin-left: 1.5rem;
@@ -93,7 +58,6 @@
 }
 
 /* Floating bubble animation for contact/registration headers */
-.registration-container::before,
 .contact-container::before {
   content: '';
   position: absolute;
@@ -107,8 +71,6 @@
   animation: float 6s ease-in-out infinite;
   z-index: 0;
 }
-
-.registration-container::after,
 .contact-container::after {
   content: '';
   position: absolute;
@@ -126,4 +88,13 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
+}
+@media
+(max-width: 768px) {
+  #contact {
+  padding-top: 60px;
+  margin-top: -60px;
+  position: relative;
+  z-index: -3;
+}
 }

@@ -116,15 +116,18 @@ const Schedule = () => {
         ))}
       </div>
 
-      <div className="text-center mt-12">
-        <div className="inline-block bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-200">
-          <h3 className="text-xl font-bold text-blue-800 mb-2">🎯 What to Expect</h3>
-          <p className="text-blue-700 max-w-2xl mx-auto">
-            Interactive sessions, networking opportunities, hands-on workshops, 
-            and insights from leading experts in Control Systems and Optimization
-          </p>
-        </div>
-      </div>
+      <section id="expect" className="relative pt-[120px] -mt-[120px]">
+  <div className="text-center mt-12 px-4">
+    <div className="inline-block w-full max-w-xl bg-gradient-to-r from-blue-50 to-purple-50 p-6 sm:p-8 rounded-2xl border border-blue-200 shadow-md">
+      <h3 className="text-lg sm:text-xl font-bold text-blue-800 mb-2">🎯 What to Expect</h3>
+      <p className="text-sm sm:text-base text-blue-700">
+        Interactive sessions, networking opportunities, hands-on workshops,
+        and insights from leading experts in Control Systems and Optimization.
+      </p>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

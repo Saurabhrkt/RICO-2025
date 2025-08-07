@@ -133,3 +133,86 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 2rem 1.2rem;
+    border-radius: 0.5rem;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .home-date {
+    font-size: 1rem;
+  }
+
+  .home-org {
+    font-size: 0.95rem;
+  }
+
+  .countdown h3 {
+    font-size: 1rem;
+  }
+
+  .timer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .timer div {
+    min-width: 60px;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .timer div span {
+    font-size: 1.5rem;
+  }
+
+  .timer div p {
+    font-size: 0.8rem;
+  }
+  #home {
+    padding-top: -40px;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.6rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-org {
+    font-size: 0.9rem;
+  }
+
+  .timer {
+    justify-content: space-around;
+    gap: 0.75rem;
+  }
+
+  .timer div {
+    min-width: 50px;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .timer div span {
+    font-size: 1.2rem;
+  }
+
+  .timer div p {
+    font-size: 0.7rem;
+  }
+}

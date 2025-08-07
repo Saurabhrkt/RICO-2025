@@ -218,3 +218,11 @@
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
+@media (max-width: 768px) {
+#objectives {
+  padding-top: 60px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+}
+}

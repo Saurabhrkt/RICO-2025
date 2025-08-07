@@ -294,3 +294,49 @@
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
+@media (max-width: 480px) {
+  .timeline-card {
+    padding: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .schedule-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .schedule-dates {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .schedule-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .schedule-dates {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+.speaker-tag {
+  word-break: break-word;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .timeline-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 768px) {
+#schedule {
+  padding-top: 80px;
+  margin-top: -60px;
+  z-index: 1;
+ 
+}
+}
