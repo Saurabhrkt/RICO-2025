@@ -1,0 +1,132 @@
+import React from 'react';
+import './Schedule.css';
+
+const Schedule = () => {
+  const scheduleData = [
+    {
+      day: 1,
+      date: "September 22, 2025",
+      theme: "Foundation & Leadership in Control Systems",
+      speakers: [
+        { name: "Prof. N. P. Padhy", type: "academic", affiliation: "IIT Roorkee" },
+        { name: "Prof. B. K. Panigrahi", type: "academic", affiliation: "IIT Delhi" }
+      ],
+      sessionType: "Keynote Sessions"
+    },
+    {
+      day: 2,
+      date: "September 23, 2025",
+      theme: "Industry-Academia Collaboration",
+      speakers: [
+        { name: "IIT Roorkee", type: "academic", affiliation: "Research Team" },
+        { name: "General Electric", type: "industry", affiliation: "Innovation Lab" },
+        { name: "IISc Bangalore", type: "academic", affiliation: "Control Systems Dept." }
+      ],
+      sessionType: "Technical Sessions"
+    },
+    {
+      day: 3,
+      date: "September 24, 2025",
+      theme: "Advanced Control Applications",
+      speakers: [
+        { name: "IIT BHU", type: "academic", affiliation: "Control Systems" },
+        { name: "Eaton Pune", type: "industry", affiliation: "R&D Division" },
+        { name: "IIT Ropar", type: "academic", affiliation: "Innovation Hub" },
+        { name: "Samsung", type: "industry", affiliation: "Technology Center" }
+      ],
+      sessionType: "Workshop & Demos"
+    },
+    {
+      day: 4,
+      date: "September 25, 2025",
+      theme: "Cutting-edge Research & Innovation",
+      speakers: [
+        { name: "CDAC", type: "industry", affiliation: "Research Division" },
+        { name: "IIT Mandi", type: "academic", affiliation: "Engineering Dept." },
+        { name: "IIT Kanpur", type: "academic", affiliation: "Control Lab" },
+        { name: "Ola", type: "industry", affiliation: "Electric Mobility" }
+      ],
+      sessionType: "Research Presentations"
+    },
+    {
+      day: 5,
+      date: "September 26, 2025",
+      theme: "Future Directions & Collaboration",
+      speakers: [
+        { name: "Synchronous Drives", type: "industry", affiliation: "Motor Control" },
+        { name: "IIT Jammu", type: "academic", affiliation: "Automation Lab" },
+        { name: "Panel Discussion", type: "special", affiliation: "All Participants" }
+      ],
+      sessionType: "Panel Discussion"
+    }
+  ];
+
+  const getSpeakerTagClass = (type) => {
+    switch (type) {
+      case 'industry':
+        return 'speaker-tag industry';
+      case 'academic':
+        return 'speaker-tag academic';
+      case 'special':
+        return 'speaker-tag special';
+      default:
+        return 'speaker-tag';
+    }
+  };
+
+  return (
+    <div className="schedule-container" id='schedule'>
+      <div className="schedule-header">
+        <h1 className="schedule-title">Event Schedule</h1>
+        <p className="schedule-subtitle">
+          Join us for an inspiring journey through 5 days of keynote talks, technical sessions, 
+          workshops, and panel discussions featuring renowned experts from academia and industry.
+        </p>
+        <div className="schedule-dates">
+          September 22-26, 2025
+        </div>
+      </div>
+
+      <div className="timeline-container">
+        <div className="timeline-line"></div>
+
+        {scheduleData.map((dayData, index) => (
+          <div
+            key={dayData.day}
+            className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+          >
+            <div className="timeline-dot"></div>
+            <div className="timeline-card">
+              <div className="day-badge">Day {dayData.day}</div>
+              <h3 className="day-title">{dayData.theme}</h3>
+              <p className="text-gray-600 mb-3 font-medium">{dayData.date}</p>
+
+              <div className="speakers-grid">
+                {dayData.speakers.map((speaker, speakerIndex) => (
+                  <div key={speakerIndex} className={getSpeakerTagClass(speaker.type)}>
+                    <div className="font-semibold">{speaker.name}</div>
+                    <div className="text-sm opacity-80">{speaker.affiliation}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="session-type">{dayData.sessionType}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center mt-12">
+        <div className="inline-block bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-200">
+          <h3 className="text-xl font-bold text-blue-800 mb-2">🎯 What to Expect</h3>
+          <p className="text-blue-700 max-w-2xl mx-auto">
+            Interactive sessions, networking opportunities, hands-on workshops, 
+            and insights from leading experts in Control Systems and Optimization
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Schedule;
