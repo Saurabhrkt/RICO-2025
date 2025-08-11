@@ -47,11 +47,12 @@ const Home = () => {
           </h2>
           <p className="home-date">
             <strong>22<sup>nd</sup> – 26<sup>th</sup> September 2025</strong> <br />
+            <strong>(Offline Mode)</strong> <br />
           </p>
           <p className="home-org">
             Organized by <br />
             <strong>Department of Instrumentation and Control Engineering</strong>, <br />
-            <span className="nit-name">Dr B R Ambedkar National Institute of Technology, Jalandhar, Punjab</span>
+            <span className="nit-name">Dr B R Ambedkar National Institute of Technology Jalandhar, Jalandhar, Punjab</span>
           </p>
 
           {/* Countdown Section */}

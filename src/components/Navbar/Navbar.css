@@ -1,10 +1,9 @@
 /* === Navbar Styles === */
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #243fdc; /* Subtle blue */
+  background: #243fdc; /* Keep existing blue */
   color: white;
   z-index: 999;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,29 +14,33 @@
 .navbar-container {
   max-width: 1200px;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  gap: 40px;
 }
 
 /* Brand */
 .navbar-brand {
   font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  user-select: none;
 }
 
 /* Hamburger Icon */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 20px;
+  justify-content: center;
+  gap: 5px;
+  width: 30px;
+  height: 24px;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .menu-toggle .bar {
@@ -45,7 +48,7 @@
   width: 100%;
   background-color: white;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .menu-toggle.open .top {
@@ -63,18 +66,19 @@
 /* Nav Links */
 .navbar-links {
   display: flex;
+  align-items: center;
   list-style: none;
-  gap: 2rem;
+  gap: 1.2rem;
   transition: all 0.4s ease;
 }
 
 .navbar-links li a {
   color: white;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.5rem 0.3rem;
-  transition: 0.3s;
+  padding: 0.6rem 0.4rem;
+  transition: color 0.3s ease;
   position: relative;
 }
 
@@ -104,8 +108,7 @@
   }
 
   .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
   }
 
   .navbar-links {
@@ -114,28 +117,28 @@
     width: 100%;
     max-height: 0;
     overflow: hidden;
+    background-color: #243fdc;
     padding: 0;
-    background-color: #3f51b5;
+    transition: max-height 0.4s ease;
   }
 
   .navbar-links.show {
     max-height: 500px;
-    padding-top: 1rem;
+    padding: 1rem 0;
   }
 
   .navbar-links li {
     width: 100%;
-    margin: 0.5rem 0;
   }
 
   .navbar-links li a {
     display: block;
     width: 100%;
-    padding: 0.8rem 1.2rem;
+    padding: 0.9rem 1.5rem;
   }
 }
 
 /* Prevent content from going under navbar */
 body {
-  padding-top: 80px;
+  padding-top: 70px;
 }

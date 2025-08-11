@@ -17,13 +17,13 @@ const Footer = () => {
         <div className="footer-right">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About ICE</a></li>
-            <li><a href="#organizer">Organizing Committee</a></li>
-            <li><a href="#objectives">Core Objectives</a></li>
-            <li><a href="#schedule">Event Schedule</a></li>
-            <li><a href="#registration">Registration</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#organizer" >Organizing Committee</a></li>
+          <li><a href="#objectives" >About RICO & Objectives</a></li>
+          <li><a href="#speakers" >Keynote Speakers</a></li>
+          <li><a href="#schedule" >Schedule</a></li>
+          <li><a href="#registration" >Registration</a></li>
+          <li><a href="#contact" >Contact Us</a></li>
           </ul>
         </div>
       </div>
