@@ -149,7 +149,7 @@ const Schedule = () => {
                 {dayData.speakers.map((speaker, speakerIndex) => (
                   <div key={speakerIndex} className={getSpeakerTagClass(speaker.type)}>
                     <div className="font-semibold">{speaker.name}</div>
-                    <div>Talk: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, pariatur!</div>
+                    <div>Talk:TBA(To be Announced)</div>
                     <div className="text-sm opacity-80">{speaker.affiliation}</div>
                   </div>
                 ))}
