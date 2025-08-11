@@ -17,7 +17,7 @@
 .footer-left h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #bfdbfe;
+  color: #dbeafe;
 }
 
 .footer-left p {
@@ -56,7 +56,7 @@
   text-align: center;
   margin-top: 2rem;
   font-size: 0.85rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.566);
   padding-top: 1rem;
   color: #cbd5e1;
 }
