@@ -1,6 +1,6 @@
 import React from "react";
 import "./Speakers.css"; // We'll style separately
-
+import { image } from "../../assets/Senthil.jpg";
 // ===== Dummy Data =====
 const academiaSpeakers = [
   {
@@ -151,7 +151,7 @@ const industrySpeakers = [
     designation: "Scientist F, CDAC Bengaluru",
     affiliation: "Industry",
     time: "12:45 PM",
-    image: "anrf-sponsored-project/src/assets/Senthil.jpg",
+    image:{image},
     link: "https://www.cdac.in",
     experience: "18+ Years",
     specialization: "High Performance Computing"
