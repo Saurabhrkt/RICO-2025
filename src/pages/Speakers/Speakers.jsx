@@ -150,7 +150,7 @@ const industrySpeakers = [
     designation: "Scientist F, CDAC Bengaluru",
     affiliation: "Industry",
     time: "12:45 PM",
-    image:"src/pages/Speakers/Senthil.jpg",
+    image:"https://ik.imagekit.io/3wdaakwnl/Senthil.jpg?updatedAt=1754960604129g",
     link: "https://www.cdac.in",
     experience: "18+ Years",
     specialization: "High Performance Computing"
