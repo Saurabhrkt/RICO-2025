@@ -19,7 +19,7 @@ const Footer = () => {
           <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#organizer" >Organizing Committee</a></li>
-          <li><a href="#objectives" >About RICO & Objectives</a></li>
+          <li><a href="#objectives" >About RICO & Core Objectives</a></li>
           <li><a href="#speakers" >Keynote Speakers</a></li>
           <li><a href="#schedule" >Schedule</a></li>
           <li><a href="#registration" >Registration</a></li>

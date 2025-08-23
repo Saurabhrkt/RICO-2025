@@ -6,18 +6,13 @@ const Schedule = () => {
     {
       day: 1,
       date: "September 22, 2025",
-      theme: "Foundation & Leadership in Control Systems",
+      theme: "Inauguration Session and Keynote Lectures",
       speakers: [
         {
-          name: "Prof. N. P. Padhy",
+          name: "Prof. Yogesh Vijay Hote",
           type: "academic",
           affiliation: "IIT Roorkee",
           link: "https://www.iitr.ac.in/~EE/nppeefee",
-        },
-        { name :'Prof. B. K. Panigrahi',
-          type:"academic",
-          affiliation:'IIT Delhi'
-          
         },
         {
           name: "Prof. B. K. Panigrahi",
@@ -37,7 +32,6 @@ const Schedule = () => {
     {
       day: 2,
       date: "September 23, 2025",
-      theme: "Industry-Academia Collaboration",
       speakers: [
         {
           name: "Dr. Tushar Jain",
@@ -47,54 +41,57 @@ const Schedule = () => {
         {
           name: "Dr. Chetan Srivastava",
           type: "industry",
-          affiliation: "Control Systems Dept.",
+          affiliation: "GE",
         },
         {
-          name: "General Electric",
+          name: "Dr. Pushpak Jagtap",
+          type: "academic",
+          affiliation: "IISc",
+        },
+        {
+          name: "Dr. O.P. Jaga",
           type: "industry",
-          affiliation: "Innovation Lab",
+          affiliation: "Siemens",
         },
       ],
-      sessionType: "Technical Sessions",
+      sessionType: "Keynote Sessions",
     },
     {
       day: 3,
       date: "September 24, 2025",
-      theme: "Advanced Control Applications",
       speakers: [
-        { name: "IIT BHU", type: "academic", affiliation: "Control Systems" },
-        { name: "IIT Ropar", type: "academic", affiliation: "Innovation Hub" },
-        { name: "Eaton Pune", type: "industry", affiliation: "R&D Division" },
-        { name: "Samsung", type: "industry", affiliation: "Technology Center" },
+        { name: "Dr. Shyam Kamal", type: "academic", affiliation: "IIT BHU" },
+        { name: "Dr. Anurag Priyadarshi", type: "industry", affiliation: "Eaton Pune" },
+        { name: "Dr. Ranjana Sodhi", type: "academic", affiliation: "IIT Ropar" },
+        { name: "Dr. Prateek Singh", type: "industry", affiliation: "Samsung" },
       ],
-      sessionType: "Workshop & Demos",
+      sessionType: "Keynote Sessions",
     },
     {
       day: 4,
       date: "September 25, 2025",
-      theme: "Cutting-edge Research & Innovation",
       speakers: [
         {
-          name: "IIT Mandi",
-          type: "academic",
-          affiliation: "Engineering Dept.",
+          name: "Mr. R.K. Senthil Kumar",
+          type: "industry",
+          affiliation: "CDAC",
         },
-        { name: "IIT Kanpur", type: "academic", affiliation: "Control Lab" },
-        { name: "CDAC", type: "industry", affiliation: "Research Division" },
-        { name: "Ola", type: "industry", affiliation: "Electric Mobility" },
+        { name: "Dr. Arun Kumar Verma", type: "academic", affiliation: "IIT Jammu" },
+        { name: "Dr. Gururaj M V", type: "academic", affiliation: "IIT Kanpur" },
+        { name: "Dr. Ashish Doorwar", type: "industry", affiliation: "Ola Electric" },
       ],
-      sessionType: "Research Presentations",
+      sessionType: "Keynote Sessions",
     },
     {
       day: 5,
       date: "September 26, 2025",
-      theme: "Future Directions & Collaboration",
+      theme: "Panel Discussion & Valedictory",
       speakers: [
-        { name: "IIT Jammu", type: "academic", affiliation: "Automation Lab" },
+        { name: "Mr. Darshankumar Pandit", type: "industry", affiliation: "Synchronous Drives & Inverters Pvt. Ltd." },
         {
-          name: "Synchronous Drives",
-          type: "industry",
-          affiliation: "Motor Control",
+          name: "Prof. N. P. Padhy",
+          type: "academic",
+          affiliation: "IIT Roorkee & MNIT Jaipur",
         },
         {
           name: "Panel Discussion",
@@ -102,7 +99,7 @@ const Schedule = () => {
           affiliation: "All Participants",
         },
       ],
-      sessionType: "Panel Discussion",
+      sessionType: "Keynote Sessions & Hands-On",
     },
   ];
 
@@ -149,7 +146,7 @@ const Schedule = () => {
                 {dayData.speakers.map((speaker, speakerIndex) => (
                   <div key={speakerIndex} className={getSpeakerTagClass(speaker.type)}>
                     <div className="font-semibold">{speaker.name}</div>
-                    <div>Talk:TBA(To be Announced)</div>
+                    <div>Talk:TBA</div>
                     <div className="text-sm opacity-80">{speaker.affiliation}</div>
                   </div>
                 ))}

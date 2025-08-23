@@ -41,7 +41,7 @@ const Registration = () => (
             <img src={qr} alt="QR Code" />
           </div>
           <p className="registration-note">
-          <b>Note:</b> Accommodation facility will be provided at additional charges. All the accommodation facility is subjected to availability.
+          <b>Note:</b> Accommodation facility will be provided based on payment basis and subject to the availability.
         </p>
         </div>
       </div>
