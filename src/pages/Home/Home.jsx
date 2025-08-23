@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import nitImage from "../../assets/nitj.jpg"; // background image
 import logo from "../../assets/logo.png"; // NITJ logo
-
+import ANRF from "../../assets/ANRF.png"
 const Home = () => {
   const calculateTimeLeft = () => {
     const difference = +new Date("2025-09-22") - +new Date();
@@ -35,8 +35,11 @@ const Home = () => {
       <div className="home-header" style={{ backgroundImage: `url(${nitImage})` }}>
         
         {/* NITJ Logo at top-left */}
+        <div className="image">
         <img src={logo} alt="NIT Jalandhar Logo" className="nitj-logo" />
-
+        <img src={ANRF} alt = 'ANRF' className="anrf-logo" />
+        </div>
+        
         <div className="overlay">
           <h1 className="home-title">
             Anusandhan National Research Foundation (ANRF) Sponsored

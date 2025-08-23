@@ -1,6 +1,8 @@
 .home-wrapper {
   width: 100%;
   overflow: hidden;
+  margin-top: 10px;
+  padding-top: 40px;
 }
 
 .home-header {
@@ -15,33 +17,56 @@
   position: relative; /* Needed for absolute positioning of logo */
 }
 
-.nitj-logo {
-  position: absolute;
-  top: 75px;
-  left: 5px;
-  width: 90px;
+/* Container for both logos - ONLY on home page */
+.home-wrapper .image {
+  display: flex;
+  justify-content: space-between; /* Space logos at opposite ends */
+  align-items: flex-start; /* Align to top */
+  position: absolute; /* Position relative to home-header */
+  top: 10px; /* Small margin from top */
+  left: 10px; /* Small margin from left */
+  right: 10px; /* Small margin from right */
+  width: calc(100% - 20px); /* Full width minus margins */
+  padding: 0; /* No internal padding */
+  z-index: 10; /* Above background but below navigation */
+  pointer-events: none; /* Non-interactive container */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* NITJ logo on the top-left - ONLY on home page */
+.home-wrapper .nitj-logo {
+  width: 140px;
   height: auto;
+  padding-top: 10px;
   animation: fadeIn 1s ease-in-out forwards;
-  z-index: 10;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+  pointer-events: auto; /* Re-enable interactions */
+  margin: 0; /* Remove any default margins */
 }
 
-@media (max-width: 768px) {
-  .nitj-logo {
-    width: 70px;
-    top: 15px;
-    left: 15px;
+/* ANRF logo on the top-right - ONLY on home page */
+.home-wrapper .anrf-logo {
+  width: 400px;
+  height: auto;
+  padding-top: 10px;
+  animation: fadeIn 1s ease-in-out forwards;
+  pointer-events: auto; /* Re-enable interactions */
+  margin: 0; /* Remove any default margins */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .nitj-logo {
-    width: 60px;
-    top: 63px;
-    left: 10px;
-  }
-}
-
-  /* Your existing overlay styles */
+/* Your existing overlay styles */
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
@@ -53,6 +78,7 @@
   transform: translateY(20px);
   animation: fadeSlideIn 1.5s ease-out forwards;
 }
+
 .home-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -72,6 +98,7 @@
 
 .home-date,
 .home-org {
+  color: #fff;
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
@@ -101,6 +128,9 @@
   font-weight: bold;
 }
 
+.timer p {
+  color: #fff;
+}
 
 /* Animations */
 @keyframes fadeSlideIn {
@@ -114,17 +144,23 @@
   }
 }
 
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
+/* Mobile Responsive Styles - ONLY for home page */
 @media (max-width: 768px) {
+  .home-wrapper .image {
+    padding: 0;
+    left: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 70px;
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 200px;
+  }
+
   .overlay {
     padding: 2rem 1.2rem;
     border-radius: 0.5rem;
@@ -168,14 +204,22 @@
   .timer div p {
     font-size: 0.8rem;
   }
+
   #home {
-    padding-top: -40px;
     position: relative;
     z-index: 3;
   }
 }
 
 @media (max-width: 480px) {
+  .home-wrapper .nitj-logo {
+    width: 60px;
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 150px;
+  }
+
   .home-title {
     font-size: 1.6rem;
   }
@@ -204,32 +248,5 @@
 
   .timer div p {
     font-size: 0.7rem;
-  }
-}
-.nitj-logo {
-  width: 90px;
-  height: auto;
-  margin-left: -1px;
-  margin-bottom: 1rem;
-  animation: fadeIn 1s ease-in-out forwards;
-  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
-  position: absolute;
-}
-
-@media (max-width: 768px) {
-  .nitj-logo {
-    width: 70px;
-    margin-bottom: 0.8rem;
-    margin-top: 1.5rem;
-    margin-left: 40vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .nitj-logo {
-
-    width: 60px;
-    margin-top: 2rem;
-    margin-left: 40vw;
   }
 }

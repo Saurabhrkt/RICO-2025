@@ -22,6 +22,7 @@ const Organizer = () => {
           </div>
 
           <div className="committee-block">
+             <h3 className="role">Co-Patron</h3>
             <p className="name">Prof. (Dr.) Rohit Mehra</p>
             <p className="affiliation">Dean R&C, Dr B R Ambedkar NIT Jalandhar</p>
           </div>

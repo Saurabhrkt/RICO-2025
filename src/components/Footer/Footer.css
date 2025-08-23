@@ -17,13 +17,14 @@
 .footer-left h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #dbeafe;
+  color: #f5f6f8;
 }
 
 .footer-left p {
   font-size: 0.95rem;
   margin-top: 0.5rem;
   line-height: 1.5;
+  color: #f5f6f8;
 }
 
 .footer-right h4 {

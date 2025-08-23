@@ -107,7 +107,7 @@ const industrySpeakers = [
   },
   {
     name: "Dr. Jagannath Samantaray",
-    designation: "Industry Expert",
+    designation: "Mathworks",
     affiliation: "Industry",
     time: "09:45 AM",
     image: "https://media.licdn.com/dms/image/v2/D5603AQF8eEwzvLh3UA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702061636710?e=2147483647&v=beta&t=G6lJlsl4AWSlfEcV9f17IUJEPnJXwoyRhR0hcD8xiMM",
@@ -176,8 +176,6 @@ const industrySpeakers = [
     specialization: "Motor Drives"
   }
 ];
-
-
 // ===== Card Component =====
 const SpeakerCard = ({ name, designation,image ,link}) => (
   <div className="speaker-card">
