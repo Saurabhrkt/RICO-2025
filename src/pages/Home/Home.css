@@ -1,8 +1,6 @@
 .home-wrapper {
   width: 100%;
   overflow: hidden;
-  margin-top: 10px;
-  padding-top: 40px;
 }
 
 .home-header {
@@ -22,36 +20,44 @@
   display: flex;
   justify-content: space-between; /* Space logos at opposite ends */
   align-items: flex-start; /* Align to top */
-  position: absolute; /* Position relative to home-header */
-  top: 10px; /* Small margin from top */
+  position: absolute; /* Changed back to absolute */
+  top: 0.2rem; /* Move below navigation bar */
   left: 10px; /* Small margin from left */
   right: 10px; /* Small margin from right */
   width: calc(100% - 20px); /* Full width minus margins */
   padding: 0; /* No internal padding */
-  z-index: 10; /* Above background but below navigation */
+  z-index: 1; /* Lower z-index to stay below navigation */
   pointer-events: none; /* Non-interactive container */
   box-sizing: border-box; /* Include padding in width calculation */
+  background: rgba(255, 255, 255, 0.1); /* Subtle background for visibility */
+  backdrop-filter: blur(5px); /* Glass effect */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: -1rem;
 }
 
 /* NITJ logo on the top-left - ONLY on home page */
 .home-wrapper .nitj-logo {
   width: 140px;
   height: auto;
-  padding-top: 10px;
+  padding: 10px;
   animation: fadeIn 1s ease-in-out forwards;
-  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)) brightness(1.1);
   pointer-events: auto; /* Re-enable interactions */
   margin: 0; /* Remove any default margins */
+  border-radius: 8px; /* Rounded corners */
 }
 
 /* ANRF logo on the top-right - ONLY on home page */
 .home-wrapper .anrf-logo {
-  width: 400px;
+  width: 300px;
   height: auto;
-  padding-top: 10px;
+  padding-top: 20px;
   animation: fadeIn 1s ease-in-out forwards;
   pointer-events: auto; /* Re-enable interactions */
   margin: 0; /* Remove any default margins */
+  background: rgba(255, 255, 255, 0.95); /* White background for visibility */
+  border-radius: 8px; /* Rounded corners */
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
 }
 
 /* Fade in animation */
@@ -69,6 +75,7 @@
 /* Your existing overlay styles */
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 6rem;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
@@ -77,6 +84,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideIn 1.5s ease-out forwards;
+  z-index: 2;
 }
 
 .home-title {
@@ -144,81 +152,206 @@
   }
 }
 
-/* Mobile Responsive Styles - ONLY for home page */
-@media (max-width: 768px) {
+/* Responsive Design for All Screen Types */
+
+/* Extra Large Screens (1200px and above) */
+@media (min-width: 1200px) {
   .home-wrapper .image {
-    padding: 0;
+    top: 5rem; /* More space for larger screens */
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 160px;
+    padding: 15px;
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 300px;
+    padding: 15px;
+  }
+  .overlay{
+    margin-top: 12rem;
+  }
+}
+
+/* Large Screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-wrapper .image {
+    top: 5rem; /* Below navigation */
+    left: 15px;
+    right: 15px;
+    width: calc(100% - 30px);
+    margin-top: -1rem;
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 140px;
+    padding: 12px;
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 280px;
+    padding: 12px;
+  }
+  .overlay{
+    margin-top: 8rem;
+  }
+}
+
+/* Medium Screens - Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-wrapper .image {
+    top: 80px; /* Below navigation */
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    margin-top: 1.1rem;
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 120px;
+    padding: 8px;
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 260px;
+    padding: 8px;
+  }
+  .overlay{
+    margin-top: 8rem;
+  }
+}
+
+/* Small Screens - Large Mobile (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .home-wrapper .image {
+    top: 70px; /* Below mobile navigation */
     left: 5px;
     right: 5px;
     width: calc(100% - 10px);
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 80px;
+    padding: 8px;
+    order: 1;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 240px;
+    padding: 8px;
+    order: 2;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .overlay{
+    margin-top: 15rem;
+  }
+}
+
+/* Extra Small Screens - Mobile (480px to 575px) */
+@media (min-width: 480px) and (max-width: 575px) {
+  .home-wrapper .image {
+    top: 70px; /* Below mobile navigation */
+    left: 3px;
+    right: 3px;
+    width: calc(100% - 6px);
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.15);
   }
   
   .home-wrapper .nitj-logo {
     width: 70px;
-  }
-  
-  .home-wrapper .anrf-logo {
-    width: 200px;
-  }
-
-  .overlay {
-    padding: 2rem 1.2rem;
-    border-radius: 0.5rem;
-  }
-
-  .home-title {
-    font-size: 2rem;
-  }
-
-  .home-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .home-date {
-    font-size: 1rem;
-  }
-
-  .home-org {
-    font-size: 0.95rem;
-  }
-
-  .countdown h3 {
-    font-size: 1rem;
-  }
-
-  .timer {
-    flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 1rem;
-  }
-
-  .timer div {
-    min-width: 60px;
-    padding: 0.6rem 0.75rem;
-  }
-
-  .timer div span {
-    font-size: 1.5rem;
-  }
-
-  .timer div p {
-    font-size: 0.8rem;
-  }
-
-  #home {
-    position: relative;
-    z-index: 3;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-wrapper .nitj-logo {
-    width: 60px;
+    padding: 6px;
+    order: 1;
+    background: rgba(255, 255, 255, 0.95);
   }
   
   .home-wrapper .anrf-logo {
     width: 150px;
+    padding: 6px;
+    order: 2;
+    background: rgba(255, 255, 255, 0.95);
   }
+  .overlay{
+    margin-top: 15rem;
+  }
+}
+
+/* Very Small Screens - Small Mobile (320px to 479px) */
+@media (min-width: 320px) and (max-width: 479px) {
+  .home-wrapper .image {
+    top: 70px; /* Below mobile navigation */
+    left: 2px;
+    right: 2px;
+    width: calc(100% - 4px);
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 60px;
+    padding: 5px;
+    order: 1;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 160px;
+    padding: 5px;
+    order: 2;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .overlay{
+    margin-top: 15rem;
+  }
+}
+
+/* Ultra Small Screens - Very Old Mobile (below 320px) */
+@media (max-width: 319px) {
+  .home-wrapper .image {
+    top: 65px; /* Below mobile navigation */
+    left: 1px;
+    right: 1px;
+    width: calc(100% - 2px);
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  .home-wrapper .nitj-logo {
+    width: 50px;
+    padding: 4px;
+    order: 1;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .home-wrapper .anrf-logo {
+    width: 140px;
+    padding: 4px;
+    order: 2;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .overlay{
+    margin-top: 15rem;
+  }
+}
 
   .home-title {
     font-size: 1.6rem;
@@ -249,4 +382,3 @@
   .timer div p {
     font-size: 0.7rem;
   }
-}

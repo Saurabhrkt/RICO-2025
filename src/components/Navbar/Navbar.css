@@ -117,7 +117,7 @@
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    background-color: #243fdc;
+    background-color: #1E3BDF;
     padding: 0;
     transition: max-height 0.4s ease;
   }
