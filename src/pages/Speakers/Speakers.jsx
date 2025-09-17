@@ -120,7 +120,7 @@ const industrySpeakers = [
     designation: "Eaton",
     affiliation: "Industry",
     time: "10:30 AM",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQF_0jCm9jO3rw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1612957041672?e=1757548800&v=beta&t=oyQd242uGqBy5PF3fbyCOCBe4fSTDqyCBm7qr64emws",
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQF_0jCm9jO3rw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1612957041672?e=1761177600&v=beta&t=KjGEtUYTIm1zJAgQJUC_J06nW_7ibCJAJ_6PVNKng8E",
     link: "https://www.linkedin.com/in/anurag-priyadarshi-phd-5a3422164/?originalSubdomain=in",
     experience: "19+ Years",
     specialization: "Power Management"
@@ -130,7 +130,7 @@ const industrySpeakers = [
     designation: "Siemens",
     affiliation: "Industry",
     time: "11:15 AM",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQEWzHHdcmMMxg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709728462157?e=1757548800&v=beta&t=Unirv9U_HqMYKMv1vyBnloBt4mqSUhEenQj3cfdZiNw",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEWzHHdcmMMxg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709728462157?e=1761177600&v=beta&t=LZ_140QupSIwvPNR8E0PxE0scYdS1D1Vn0A8VisfJcU",
     link: "https://www.linkedin.com/in/dr-om-prakash-jaga-634b4225a/?originalSubdomain=in",
     experience: "24+ Years",
     specialization: "Industrial Automation"
@@ -140,7 +140,7 @@ const industrySpeakers = [
     designation: "GE",
     affiliation: "Industry",
     time: "12:00 PM",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQHad6Iiz6yWQA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1661317913712?e=1757548800&v=beta&t=S2I-S-0GjwYucmEtl0Tyc0KZVKLKJ2RcHoZCv-fShb0",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQHad6Iiz6yWQA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1661317913712?e=1761177600&v=beta&t=V7V0A3KoVaDqcGux1bTMpzvKyHGS9eqVe1OPAej8rO0",
     link: "https://www.linkedin.com/in/dr-chetan-srivastava-201558ab/?originalSubdomain=in",
     experience: "21+ Years",
     specialization: "Digital Solutions"
@@ -160,7 +160,7 @@ const industrySpeakers = [
     designation: "Ola Electric",
     affiliation: "Industry",
     time: "02:00 PM",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQG6GAldrUmWyA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516624410100?e=1757548800&v=beta&t=YjEbb2xFcUZH7iGnZWu1godsnla2F-b7uM52M2hMweE",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQG6GAldrUmWyA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516624410062?e=1761177600&v=beta&t=Zc2wf-F-pmQtR5yzjQzYt_wmd014yUOrOMdE2xs_O-o",
     link: "https://www.linkedin.com/in/drashishdoorwarphd/?originalSubdomain=in",
     experience: "13+ Years",
     specialization: "Electric Vehicles"
@@ -170,7 +170,7 @@ const industrySpeakers = [
     designation: "Synchronous Drives & Inverters Pvt. Ltd.",
     affiliation: "Industry",
     time: "02:45 PM",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFlssUx_c_KqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713004008472?e=1757548800&v=beta&t=A_W0jSYJ91kf2Db-gD3uMA-JIir_Q1pjcgzrox_6xaA",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFlssUx_c_KqA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1713004008472?e=1761177600&v=beta&t=trHdNVQaPz-L7MsSuAgPZ4f2tLj1r-BkAkDKcumypk0",
     link: "https://www.linkedin.com/in/darshankumar-pandit-12814a10/?originalSubdomain=in",
     experience: "17+ Years",
     specialization: "Motor Drives"
