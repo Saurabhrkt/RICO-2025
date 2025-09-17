@@ -1,97 +1,31 @@
-/* src/pages/Registration.css */
-.contact-container {
+.contact-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  min-height: 50vh;
-  position: relative;
+  padding: 2rem 2rem;
+  background: #f8fafc;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .contact-title {
-  text-align: center;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   font-weight: bold;
   background: linear-gradient(135deg, #1e40af, #3b82f6, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  max-width: 700px;
+  background-color: white;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-color: #3b82f6;
-}
-
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
-}
-.contact-list {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-  color: #1f2937;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Floating bubble animation for contact/registration headers */
-.contact-container::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 10%;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  border-radius: 50%;
-  opacity: 0.1;
-  animation: float 6s ease-in-out infinite;
-  z-index: 0;
-}
-.contact-container::after {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: 15%;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  border-radius: 50%;
-  opacity: 0.1;
-  animation: float 8s ease-in-out infinite reverse;
-  z-index: 0;
-}
-.contact-card::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
 }
 
 .contact-table {
@@ -100,35 +34,83 @@
   margin-bottom: 1.5rem;
 }
 
-.contact-table thead {
-  background-color: #e0ecff;
-}
-
-.contact-table th,
+.contact-table th, 
 .contact-table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #cbd5e1;
+  padding: 1rem;
   text-align: left;
-  font-size: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  word-break: break-word;
 }
-.table-wrapper {
-  overflow-x: auto;
-}
-.contact-table tbody tr:hover {
+
+.contact-table th {
   background-color: #f1f5f9;
+  color: #334155;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
+.contact-table td {
+  color: #475569;
+}
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+.contact-table tbody tr:hover {
+  background-color: #f8fafc;
 }
-@media
-(max-width: 768px) {
-  #contact {
-  padding-top: 60px;
-  margin-top: -60px;
-  position: relative;
-  z-index: -3;
+
+.contact-note {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1.5rem;
+  line-height: 1.6;
 }
+
+@media (min-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+  .contact-card {
+    padding: 1.5rem;
+  }
+  .contact-table thead {
+    display: none;
+  }
+  .contact-table, 
+  .contact-table tbody, 
+  .contact-table tr, 
+  .contact-table td {
+    display: block;
+    width: 100%;
+  }
+  .contact-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .contact-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .contact-table tr:last-child td:last-child {
+    border-bottom: none;
+  }
+  .contact-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(50% - 2rem);
+    text-align: left;
+    font-weight: 600;
+    color: #334155;
+  }
 }

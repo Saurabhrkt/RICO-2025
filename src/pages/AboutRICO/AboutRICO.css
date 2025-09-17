@@ -1,11 +1,11 @@
-.about-section {
+.about-rico-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 2rem;
   background: #f8fafc;
 }
 
-.about-title {
+.about-rico-title {
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
@@ -18,31 +18,45 @@
 }
 
 @media (min-width: 768px) {
-  .about-title {
+  .about-rico-title {
     font-size: 2.5rem;
   }
 }
 
-.about-content {
+.about-rico-content {
   background-color: white;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-radius: 0.75rem;
-  padding: 2rem;
+  padding: 2.5rem;
   color: #334155;
   line-height: 1.8;
+}
+
+.about-rico-paragraph {
   text-align: justify;
+  margin: 0 0 1.25rem 0;
 }
 
-@media (min-width: 640px) {
-  .about-content {
-    padding: 2.5rem;
-  }
+.about-rico-paragraph:last-child {
+  margin-bottom: 0;
 }
 
-.about-paragraph {
-  margin: 0;
+.about-rico-list {
+  list-style-type: '✓  ';
+  padding-left: 1.5rem;
+  margin: 0 0 1.25rem 0;
 }
 
+.about-rico-list li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-rico-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Added Button Styles --- */
 .read-more-btn {
   background-color: #3b82f6;
   color: white;

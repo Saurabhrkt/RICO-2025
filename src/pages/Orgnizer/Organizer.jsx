@@ -3,52 +3,51 @@ import './Organizer.css';
 
 const Organizer = () => {
   return (
-    <div className="committee-container" id="organizer">
-      <h2 className="committee-title">Organizing Committee</h2>
+    <section className="organizer-section" id="organizer">
+      <h2 className="organizer-title">Organizing Committee</h2>
 
-      <div className="committee-grid">
-        {/* Left Column */}
-        <div className="committee-column">
-          <div className="committee-block">
+      <div className="organizer-grid">
+        <div className="organizer-column">
+          <div className="organizer-card">
             <h3 className="role">Chief Patron</h3>
             <p className="name">Prof. (Dr.) Bhim Singh</p>
             <p className="affiliation">Chairman, BOG, Dr B R Ambedkar NIT Jalandhar</p>
           </div>
 
-          <div className="committee-block">
+          <div className="organizer-card">
             <h3 className="role">Co-Patron</h3>
             <p className="name">Prof. (Dr.) Ajay Bansal</p>
             <p className="affiliation">Registrar, Dr B R Ambedkar NIT Jalandhar</p>
           </div>
 
-          <div className="committee-block">
+          <div className="organizer-card">
              <h3 className="role">Co-Patron</h3>
             <p className="name">Prof. (Dr.) Rohit Mehra</p>
             <p className="affiliation">Dean R&C, Dr B R Ambedkar NIT Jalandhar</p>
           </div>
 
-          <div className="committee-block">
+          <div className="organizer-card">
             <h3 className="role">Convener</h3>
             <p className="name">Dr. Mahendra Kumar</p>
+            <p className="affiliation">Department of ICE</p>
           </div>
         </div>
 
-        {/* Right Column */}
-        <div className="committee-column">
-          <div className="committee-block">
+        <div className="organizer-column">
+          <div className="organizer-card">
             <h3 className="role">Patron</h3>
             <p className="name">Prof. (Dr.) Binod Kumar Kanaujia</p>
             <p className="affiliation">Director, Dr B R Ambedkar NIT Jalandhar</p>
           </div>
 
-          <div className="committee-block">
+          <div className="organizer-card">
             <h3 className="role">General Chair</h3>
             <p className="name">Prof. (Dr.) K S Nagla</p>
             <p className="affiliation">Head, Department of ICE</p>
           </div>
 
-          <div className="committee-block">
-            <h3 className="role">Co-Convener(s):</h3>
+          <div className="organizer-card">
+            <h3 className="role">Co-Convener(s)</h3>
             <p className="name">Prof. (Dr.) K S Nagla</p>
             <p className="name">Dr. O P Verma</p>
             <p className="name">Dr. Anil K. Yadav</p>
@@ -56,7 +55,7 @@ const Organizer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

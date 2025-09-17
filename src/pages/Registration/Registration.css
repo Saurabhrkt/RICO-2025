@@ -1,180 +1,172 @@
-.registration-container {
+.registration-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  min-height: 50vh;
-  position: relative;
-  overflow: hidden;
+  padding: 1rem 2rem;
+  background: #f8fafc;
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .registration-title {
-  text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   background: linear-gradient(135deg, #1e40af, #3b82f6, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .registration-card {
-  background: white;
-  max-width: 700px;
+  background-color: white;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.registration-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-color: #3b82f6;
-}
-
-.registration-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
-}
-
-.table-wrapper {
-  overflow-x: auto;
 }
 
 .registration-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
-  min-width: 600px;
 }
 
-.registration-table thead {
-  background-color: #e0ecff;
-}
-
-.registration-table th,
+.registration-table th, 
 .registration-table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #cbd5e1;
+  padding: 1rem;
   text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.registration-table th {
+  background-color: #f1f5f9;
+  color: #334155;
   font-size: 1rem;
+  font-weight: 600;
+}
+
+.registration-table td {
+  color: #475569;
 }
 
 .registration-table tbody tr:hover {
-  background-color: #f1f5f9;
+  background-color: #f8fafc;
 }
 
 .registration-note {
-  font-size: 0.95rem;
-  color: #374151;
-  margin-top: 1rem;
-}
-
-.here {
-  color: #3b82f6;
-  text-decoration: underline;
-  font-weight: 500;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1.5rem;
+  line-height: 1.6;
 }
 
 .payment-card {
-  margin-top: 1.5rem;
-  padding: 1.5rem;
-  background: #f8fafc;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e2e8f0;
   text-align: center;
 }
 
+.payment-card h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
 .payment-card p {
-  font-size: 1rem;
-  color: #374151;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25);
+}
+
+.register-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
 }
 
 .qr-code {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .qr-code img {
-  width: 150px;
-  height: 150px;
+  max-width: 180px;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-left: 20rem;
 }
 
-/* Floating animated decorative elements */
-.registration-container::before,
-.registration-container::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
-  z-index: 0;
-}
-
-.registration-container::before {
-  top: -50px;
-  left: 10%;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  animation: float 6s ease-in-out infinite;
-}
-
-.registration-container::after {
-  top: -30px;
-  right: 15%;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  animation: float 8s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+@media (min-width: 768px) {
+  .registration-title {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .registration-title {
-    font-size: 2rem;
+  .registration-section {
+    padding: 3rem 1rem;
   }
-
   .registration-card {
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
-
-  .registration-table {
-    font-size: 0.9rem;
+  .registration-table thead {
+    display: none;
   }
-
-  .registration-note,
-  .payment-card p {
-    font-size: 0.9rem;
+  .registration-table, 
+  .registration-table tbody, 
+  .registration-table tr, 
+  .registration-table td {
+    display: block;
+    width: 100%;
   }
-
-  #registration {
-    padding-top: 60px;
-    padding-bottom: 40px;
-    z-index:4;
+  .registration-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .registration-table td {
+    text-align: right;
+    padding-left: 50%;
     position: relative;
+    border-bottom: 1px solid #e2e8f0;
   }
-
+  .registration-table td:last-child {
+    border-bottom: none;
+  }
+  .registration-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(50% - 2rem);
+    text-align: left;
+    font-weight: 600;
+    color: #334155;
+  }
   .qr-code img {
-    width: 120px;
-    height: 120px;
-  }
+  max-width: 180px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-left: 3.5rem;
+}
 }

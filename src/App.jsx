@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
 import Organizer from './pages/Orgnizer/Organizer';
 import Speakers from './pages/Speakers/Speakers';
+import AboutRICO from './pages/AboutRICO/AboutRICO';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Home />
       <About/>
       <Organizer />
+      <AboutRICO />
       <Objectives />
       <Speakers/>
       <Schedule />
